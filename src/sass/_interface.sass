@@ -1,6 +1,29 @@
+* 
+  box-sizing: border-box
 body
   color: $text-color
   +reg
+
+section
+  padding: 90px 0
+.section
+  background-color: $secondary
+  &__title
+    font-size: 24px;
+    +bold
+  &__subtitle
+    font-size: 16px;
+    +reg
+.input
+  padding: 20px 26px
+  font-size: 15px
+  font-weight: 400
+  line-height: 24px
+  border-radius: 10px
+  border: 1px solid #dddddd
+  transition: 0.2s
+  &:focus
+    border: 1px solid #f0a010
 
 img
   width: 100%
@@ -15,7 +38,13 @@ img
   padding: 18px 30px
   border-radius: 10px
   font-size: 13px
-  font-weight: 400
+  font-weight: 600
+  transition: 0.2s
+  &:hover
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+
+
 
 @media (max-width: 1200px)
   .container
@@ -27,10 +56,14 @@ img
     width: 98%
     max-width: 720px
 @media (max-width: 768px)
+  section
+    padding: 50px 0
   .container
     width: 98%
     max-width: 544px
 @media (max-width: 567px)
+  section
+    padding: 30px 0
   .container
     width: 277px
   .button 

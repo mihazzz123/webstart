@@ -21,6 +21,37 @@ body {
   font-family: 'Museo Sans Regular', sans;
   font-weight: 300; }
 
+#go-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 50%;
+  left: 50%;
+  z-index: 1;
+  border-radius: 50%;
+  border: 0;
+  -webkit-box-shadow: 0 0 30px 10px #555555;
+          box-shadow: 0 0 30px 10px #555555;
+  padding: 0;
+  background-color: 0;
+  opacity: 0.25;
+  -webkit-transform: 0.4s;
+          transform: 0.4s; }
+  #go-top:hover {
+    opacity: 0.8; }
+
+.fa-arrow-up {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 45px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  color: #333333;
+  cursor: pointer; }
+
 section {
   padding: 90px 0; }
 
@@ -351,9 +382,8 @@ img {
     margin-bottom: 30px;
     width: 100%; }
   .offer__text {
-    display: inline-block; }
-    .offer__text:first-child {
-      margin-right: 70px; }
+    display: inline-block;
+    width: 200px; }
     .offer__text b {
       font-family: 'Museo Sans Bold', sans;
       font-weight: 800; }

@@ -9,6 +9,10 @@
   <!-- normalize -->
   <link rel="stylesheet" href="css/normalize.css">
 
+  <!-- owl.carousel -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
   <!-- SLICK -->
   <link rel="stylesheet" type="text/css" href="css/slick.css">
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
@@ -134,25 +138,25 @@
       <h2 class="section__title portfolio__title">Работая с 2007 года, мы сделали более 500 ремонтов в квартирах и домах
       </h2>
       <!-- /.section__title -->
-      <div class="portfolio-slider" id="slider">
-        <div class="portfolio-slider__item"><img src="/src/img/portfolio/slider-img-1.png" alt="" class="portfolio-slider__image"></div>
+      <div class="portfolio-slider owl-carousel" id="slider">
+        <div class="portfolio-slider__item item"><img src="/src/img/portfolio/slider-img-1.png" alt="" class="portfolio-slider__image"></div>
         <!-- /.slider__item -->
-        <div class="portfolio-slider__item"><img src="/src/img/portfolio/slider-img-2.png" alt="" class="portfolio-slider__image"></div>
+        <div class="portfolio-slider__item item"><img src="/src/img/portfolio/slider-img-2.png" alt="" class="portfolio-slider__image"></div>
         <!-- /.slider__item -->
-        <div class="portfolio-slider__item"><img src="/src/img/portfolio/slider-img-3.png" alt="" class="portfolio-slider__image"></div>
+        <div class="portfolio-slider__item item"><img src="/src/img/portfolio/slider-img-3.png" alt="" class="portfolio-slider__image"></div>
         <!-- /.slider__item -->
-        <div class="portfolio-slider__item"><img src="/src/img/portfolio/slider-img-1.png" alt="" class="portfolio-slider__image"></div>
+        <div class="portfolio-slider__item item"><img src="/src/img/portfolio/slider-img-1.png" alt="" class="portfolio-slider__image"></div>
         <!-- /.slider__item -->
-        <div class="portfolio-slider__item"><img src="/src/img/portfolio/slider-img-2.png" alt="" class="portfolio-slider__image"></div>
+        <div class="portfolio-slider__item item"><img src="/src/img/portfolio/slider-img-2.png" alt="" class="portfolio-slider__image"></div>
         <!-- /.slider__item -->
-        <div class="portfolio-slider__item"><img src="/src/img/portfolio/slider-img-3.png" alt="" class="portfolio-slider__image"></div>
+        <div class="portfolio-slider__item item"><img src="/src/img/portfolio/slider-img-3.png" alt="" class="portfolio-slider__image"></div>
         <!-- /.slider__item -->
       </div>
       <!-- /.portfolio__slider slider -->
       <div class="portfolio-arrows">
-        <div id="arrow-left" class="portfolio__arrow"><img src="img/portfolio/left-arrow.png" alt=""></div>
+        <div id="arrow-left" class="portfolio__arrow customPrevBtn owl-prew"><img src="img/portfolio/left-arrow.png" alt=""></div>
         <!-- /.portfolio__arow -->
-        <div id="arrow-right" class="portfolio__arrow"><img src="img/portfolio/right-arrow.png" alt=""></div>
+        <div id="arrow-right" class="portfolio__arrow customNextBtn owl-next"><img src="img/portfolio/right-arrow.png" alt=""></div>
         <!-- /.portfolio__arow -->
       </div>
       <!-- /.portfolio-arows -->
@@ -167,7 +171,50 @@
   crossorigin="anonymous"></script>
   <script src="js/modal.js" type="text/javascript"></script>
   <script src="js/slick.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
+  <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script>
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    loop:true,
+    nav:false,
+    margin:10,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },            
+        960:{
+            items:2
+        },
+        1200:{
+            items:3
+        }
+    }
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
+var owl = $('.owl-carousel');
+owl.owlCarousel();
+// Go to the next item
+$('.customNextBtn').click(function() {
+    owl.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.customPrevBtn').click(function() {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    owl.trigger('prev.owl.carousel', [300]);
+})
+</script>
+  <!-- <script type="text/javascript">
     $(document).ready(function(){
       $('#slider').slick({
         slidesToShow: 3,
@@ -199,6 +246,6 @@
         ]
       });
     });
-  </script>
+  </script> -->
 </body>
 </html>

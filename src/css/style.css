@@ -131,7 +131,7 @@ label.error {
 
 @media (max-width: 567px) {
   img {
-    max-width: 277px; }
+    max-width: 270px; }
   section {
     padding: 30px 0; }
   .container {
@@ -313,10 +313,18 @@ label.error {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    min-width: 300px; }
+    max-width: 247px; }
   .hero-item {
-    min-width: 320px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: 320px;
+    width: 100%; }
     .hero-item__text {
+      width: 160px;
       text-align: left; }
   .hero-img {
     max-width: 100%; } }
@@ -326,6 +334,8 @@ label.error {
     padding-right: 0; } }
 
 @media (max-width: 567px) {
+  .hero-list {
+    max-width: 247px; }
   .hero-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -359,7 +369,7 @@ label.error {
       font-size: 12px;
       font-weight: 40px; }
   .hero-img__img {
-    max-width: 300px; } }
+    max-width: 247px; } }
 
 .offer {
   background: url("../img/offer/offer-bg.jpg") no-repeat;
@@ -701,7 +711,7 @@ label.error {
 
 .brif {
   background: url("../img/brif/brif-bg2.png"), url("../img/brif/brif-bg.png");
-  background-size: 50% 100%, contain;
+  background-size: 50% 100%, cover;
   background-repeat: repeat-y, no-repeat;
   background-position: left center, right center; }
   .brif-block {
@@ -763,8 +773,7 @@ label.error {
       margin: 0;
       padding-left: 65px;
       position: relative;
-      margin-bottom: 30px;
-      height: 35px; }
+      margin-bottom: 30px; }
       .brif-list__item:before {
         content: counter(list) ".";
         width: 35px;
@@ -837,7 +846,7 @@ label.error {
 
 @media (max-width: 768px) {
   .brif {
-    background-size: 100% 50%, cover;
+    background-size: 100% 45%, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: top center, bottom center; }
     .brif-block {
@@ -848,25 +857,144 @@ label.error {
     .brif-interview {
       padding-right: 0px; }
     .brif-form {
-      padding-left: 0px; } }
+      padding-left: 0px;
+      padding-top: 40px; }
+    .brif__form {
+      margin: auto;
+      width: 100%; } }
 
 @media (max-width: 567px) {
-  .brif-interview__title {
-    padding-top: 60px;
-    margin-bottom: 16px; }
-  .brif-interview__subtitle {
-    margin-bottom: 35px; }
-  .brif-list {
-    padding-bottom: 68px; }
-  .brif-form__title {
-    margin-bottom: 16px; }
-  .brif-form__subtitle {
-    margin-bottom: 35px; }
-  .brif-form__input {
+  .brif {
+    background-size: 100% 55%, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center; }
+    .brif-interview__title {
+      padding-top: 60px;
+      margin-bottom: 16px; }
+    .brif-interview__subtitle {
+      margin-bottom: 35px; }
+    .brif-list {
+      padding-bottom: 68px; }
+    .brif-form__title {
+      margin-bottom: 16px; }
+    .brif-form__subtitle {
+      margin-bottom: 35px; }
+    .brif-form__input {
+      width: 100%;
+      margin-bottom: 10px; }
+      .brif-form__input:first-child {
+        margin-bottom: 8px; }
+    .brif-form__button {
+      margin-bottom: 30px; } }
+
+.footer {
+  position: relative; }
+
+.map {
+  width: 50%;
+  height: 640px;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-left: 215px;
+  padding-top: 100px; }
+  .contacts-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .contacts__title {
+    font-family: 'Museo Sans Bold', sans;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 100px;
     width: 100%;
-    margin-bottom: 10px; }
-    .brif-form__input:first-child {
-      margin-bottom: 8px; }
-  .brif-form__button {
-    margin-bottom: 30px; } }
+    max-width: 320px; }
+  .contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0;
+    list-style-type: none; }
+    .contacts-list__item {
+      margin-bottom: 23px; }
+    .contacts-list__icon {
+      vertical-align: top;
+      display: inline-block;
+      margin-right: 25px;
+      font-size: 22px;
+      color: #ffd200; }
+    .contacts-list__text {
+      font-family: 'Museo Sans Regular', sans;
+      font-weight: 300;
+      display: inline-block;
+      font-size: 16px;
+      max-width: 150px; }
+      .contacts-list__text b {
+        font-family: 'Museo Sans Bold', sans;
+        font-weight: 800; }
+      .contacts-list__text a {
+        font-family: 'Museo Sans Bold', sans;
+        font-weight: 800;
+        text-decoration: none;
+        color: #333333; }
+
+@media (max-width: 768px) {
+  .footer-wpar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .map {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    min-height: 70%; }
+  .footer-container {
+    width: 100%;
+    margin: auto;
+    height: 30%; }
+  .contacts {
+    margin: auto;
+    padding-left: 0;
+    padding-top: 30px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
+    .contacts__title {
+      margin: auto;
+      margin-bottom: 40px;
+      width: 100%;
+      font-size: 20px; }
+    .contacts-list {
+      margin: auto; }
+  .contacts-list {
+    margin-bottom: 60px; } }
+
+@media (max-width: 576px) {
+  .contacts__title {
+    max-width: 270px; } }
 /*# sourceMappingURL=style.css.map */

@@ -120,25 +120,17 @@
         <span class="section__subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!
         </span>
         <!-- /.section__subtitle offer__subtitle -->
-        <form action="#" id="ofer-form" method="get" onsubmit="ym(52718305, 'reachGoal', 'offer-form'); return true;" class="form offer__form">
-          <div class="offer-row">
-            <div class="offer-col">
-                <input type="text" name="username" placeholder="Ваше имя" class="input offer__input offer__col">
-            </div>
-            <div class="offer-col">
-                <input type="tel" name="phone" placeholder="Ваш телефон" class="input phone offer__input offer__col">
-            </div>
-          </div>
-          <!-- /.offer-row -->
-          <button class="button offer__button">Получить бесплатный дизайн-проект
-          </button>
+        <form action="#" id="offer-form" method="get" onsubmit="ym(52718305, 'reachGoal', 'offer-form'); return true;" class="form offer__form">
+          <input type="text" name="username" placeholder="Ваше имя" class="input offer__input">
+          <input type="tel" name="phone" placeholder="Ваш телефон" class="input phone offer__input">
+          <button class="button offer__button">Получить бесплатный дизайн-проект</button>
           <!-- /.button offer__button -->
         </form>
         <!-- /.form offer__form -->
         <div class="offer-row offer__desc">
-          <span class="offer__text offer__col">Наш менеджер перезвонит Вам в течение 60 секунд
+          <span class="offer__text">Наш менеджер перезвонит Вам в течение 60 секунд
           </span> <!-- /.offer__text -->
-          <span class="offer__text offer__col">или перезвоните нам сами <br>
+          <span class="offer__text">или перезвоните нам сами <br>
             <b>+7 (495) 42-251-31</b>
           </span> <!-- /.offer__text -->
         </div>
@@ -330,21 +322,21 @@
         <div class="assistance-block__item">
           <span class="assistance-block__text">
             Поможем закупить все материалы по оптовым ценам у проверенных поставщиков              
-          </span> <!-- /.assistence-block__text -->
+          </span> <!-- /.assistance-block__text -->
           <img src="img/assistance/img-1.png" alt="" class="assistance-block__image">
         </div>
         <!-- /.assistance-block__item -->
         <div class="assistance-block__item">
           <span class="assistance-block__text">
               Мы дадим Вам <b>максимальные скидки</b> у наших партнеров для закупки материалов оптом              
-          </span> <!-- /.assistence-block__text -->
+          </span> <!-- /.assistance-block__text -->
           <img src="img/assistance/img-2.png" alt="" class="assistance-block__image">
         </div>
         <!-- /.assistance-block__item -->
         <div class="assistance-block__item">
           <span class="assistance-block__text">
             Все, что не сможете найти в городе - поможем заказать <b>у проверенных поставщиков </b>             
-          </span> <!-- /.assistence-block__text -->
+          </span> <!-- /.assistance-block__text -->
           <img src="img/assistance/img-3.png" alt="" class="assistance-block__image">
         </div>
         <!-- /.assistance-block__item -->
@@ -514,7 +506,7 @@
           }
         }
       });
-      $("#ofer-form").validate({
+      $("#offer-form").validate({
          
          rules: {
            phone: {

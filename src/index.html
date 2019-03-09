@@ -25,6 +25,16 @@
 
   <link rel="stylesheet" type="text/css" href="https://yastatic.net/bootstrap/3.3.4/css/bootstrap.min.css">
 
+  <!-- Яндекс Метрика -->
+  <!-- Yandex.Metrika counter --> 
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(52718305, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/52718305" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript> <!-- /Yandex.Metrika counter -->
+
   <head>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=c46d4ee4-ffc9-438e-9e0f-b6b79992cd4b&lang=ru_RU" type="text/javascript">
     </script>
@@ -45,7 +55,7 @@
             <a href="tel:+7(495)42-251-31" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
           <!-- /.navbar__contact -->
-          <button id="button" class="button navbar__button">Перезвоните мне</button>
+          <button id="button" onclick="ym(52718305, 'reachGoal', 'button'); return true;" class="button navbar__button">Перезвоните мне</button>
           <!-- /.button navbar__button -->
         </div>
         <!-- /.navbar__info -->
@@ -460,9 +470,7 @@
     <!-- /.footer-wpar -->
   </footer>
   <!-- /.footer -->  
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>

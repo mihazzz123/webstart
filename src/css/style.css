@@ -27,7 +27,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 5%;
-  z-index: 1;
+  z-index: 2;
   border-radius: 50%;
   border: 0;
   -webkit-box-shadow: 0 0 30px 10px #555555;
@@ -99,6 +99,18 @@ section {
     background-color: #ffdb33;
     cursor: pointer; }
 
+input.error, input.invalid {
+  -webkit-box-shadow: 0 0 5px 1px red;
+          box-shadow: 0 0 5px 1px red;
+  margin-bottom: 0; }
+
+label.error {
+  display: block;
+  z-index: 2;
+  bottom: 10px;
+  margin: 0;
+  padding: 0; }
+
 @media (max-width: 1200px) {
   .container {
     width: 98%;
@@ -118,6 +130,8 @@ section {
     max-width: 544px; } }
 
 @media (max-width: 567px) {
+  img {
+    max-width: 277px; }
   section {
     padding: 30px 0; }
   .container {
@@ -377,9 +391,8 @@ section {
   .offer__form {
     max-width: 100%; }
   .offer__input {
-    margin-bottom: 30px; }
-    .offer__input:first-child {
-      margin-right: 10px; }
+    margin-bottom: 30px;
+    max-width: 240px; }
   .offer__button {
     font-size: 16px;
     margin-bottom: 30px;
@@ -391,9 +404,16 @@ section {
       font-family: 'Museo Sans Bold', sans;
       font-weight: 800; }
   .offer-row {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
@@ -678,4 +698,175 @@ section {
     margin-bottom: 27px; }
   .steps__subtitle {
     margin-bottom: 34px; } }
+
+.brif {
+  background: url("../img/brif/brif-bg2.png"), url("../img/brif/brif-bg.png");
+  background-size: 50% 100%, contain;
+  background-repeat: repeat-y, no-repeat;
+  background-position: left center, right center; }
+  .brif-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .brif-interview {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding-right: 70px; }
+    .brif-interview__title {
+      font-size: 22px;
+      font-family: 'Museo Sans Bold', sans;
+      font-weight: 800;
+      margin-bottom: 50px; }
+    .brif-interview__subtitle {
+      font-size: 16px;
+      font-family: 'Museo Sans Regular', sans;
+      font-weight: 300;
+      display: inline-block;
+      margin-bottom: 95px; }
+    .brif-interview__list {
+      font-size: 18px;
+      font-family: 'Museo Sans Bold', sans;
+      font-weight: 800;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 0; }
+  .brif-list {
+    counter-reset: list;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .brif-list__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      counter-increment: list;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      padding-left: 65px;
+      position: relative;
+      margin-bottom: 30px;
+      height: 35px; }
+      .brif-list__item:before {
+        content: counter(list) ".";
+        width: 35px;
+        height: 35px;
+        border: 2px solid #333333;
+        border-radius: 100%;
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        line-height: 35px;
+        position: absolute;
+        left: 0px;
+        top: 0px; }
+  .brif__form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 370px;
+    width: 100%; }
+  .brif-form {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding-left: 210px; }
+    .brif-form__title {
+      text-align: center;
+      font-size: 22px;
+      font-family: 'Museo Sans Bold', sans;
+      font-weight: 800;
+      margin-bottom: 50px; }
+    .brif-form__subtitle {
+      text-align: center;
+      font-size: 16px;
+      font-family: 'Museo Sans Regular', sans;
+      font-weight: 300;
+      display: block;
+      margin-bottom: 50px; }
+    .brif-form__input {
+      width: 100%;
+      margin-bottom: 30px; }
+      .brif-form__input:first-child {
+        margin-bottom: 15px; }
+    .brif-form__button {
+      width: 100%;
+      margin-bottom: 33px;
+      height: 70px;
+      font-size: 16px;
+      font-family: 'Museo Sans Bold', sans;
+      font-weight: 800; }
+    .brif-form__text {
+      text-align: center; }
+
+@media (max-width: 1200px) {
+  .brif-interview {
+    padding-right: 30px; }
+  .brif-form {
+    padding-left: 70px; } }
+
+@media (max-width: 992px) {
+  -interview {
+    padding-right: 10px; }
+  -form {
+    padding-left: 10px; } }
+
+@media (max-width: 768px) {
+  .brif {
+    background-size: 100% 50%, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center; }
+    .brif-block {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .brif-interview {
+      padding-right: 0px; }
+    .brif-form {
+      padding-left: 0px; } }
+
+@media (max-width: 567px) {
+  .brif-interview__title {
+    padding-top: 60px;
+    margin-bottom: 16px; }
+  .brif-interview__subtitle {
+    margin-bottom: 35px; }
+  .brif-list {
+    padding-bottom: 68px; }
+  .brif-form__title {
+    margin-bottom: 16px; }
+  .brif-form__subtitle {
+    margin-bottom: 35px; }
+  .brif-form__input {
+    width: 100%;
+    margin-bottom: 10px; }
+    .brif-form__input:first-child {
+      margin-bottom: 8px; }
+  .brif-form__button {
+    margin-bottom: 30px; } }
 /*# sourceMappingURL=style.css.map */

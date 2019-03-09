@@ -14,8 +14,7 @@
   &-block
     position: relative
     width: 50%
-    max-width: 510px
-    padding-right: 90px
+    margin-right: 90px
   &__title
     display: block
     line-height: 35px
@@ -26,28 +25,36 @@
     margin-bottom: 30px
     max-width: 300px
   &__form
-    max-width: 100%
+    width: 100%
+    max-width: 495px
   &__input
+    display: inline-block
     margin-bottom: 30px
     max-width: 240px
   &__button
     font-size: 16px
     margin-bottom: 30px
     width: 100%
+    max-width: 495px
   &__text
     display: inline-block
     width: 200px
     & b 
       +bold
   &-row
-    position: relative
     display: flex
     flex-direction: row
-    flex-wrap: wrap
+    flex-wrap: no-wrap
+    justify-content: space-between
+    max-width: 495px
+  &-col
+    display: flex
     justify-content: space-between
 
 @media (max-width: 1200px)
   .offer
+    &__input
+      max-width: 200px
     &-block
       padding-right: 15px
 @media (max-width: 992px)
@@ -60,7 +67,11 @@
       margin-right: 70px
       &:first-child
         margin-bottom: 10px
+    &__col
+      min-width: 100%
+      margin: auto
     &__input
+      margin-bottom: 30px
       &:first-child
         margin-right: 0
 @media (max-width: 768px)

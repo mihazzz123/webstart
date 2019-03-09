@@ -5,6 +5,7 @@ body
   +reg
 
 #go-top
+  display: none
   width: 50px
   height: 50px
   position: fixed
@@ -18,8 +19,8 @@ body
   background-color: 0
   opacity: 0.25
   transform: 0.4s
-  &:hover
-    opacity: 0.8
+  // &:hover
+  //   opacity: 0.8
 
 .fa-arrow-up
   position: relative
@@ -70,9 +71,9 @@ section
   font-size: 13px
   font-weight: 600
   transition: 0.2s
-  &:hover
-    background-color: lighten($main-color, 10%)
-    cursor: pointer
+  // &:hover
+  //   background-color: lighten($main-color, 10%)
+  //   cursor: pointer
 input.error, input.invalid
   box-shadow: 0 0 5px 1px red
   margin-bottom: 0
@@ -84,11 +85,21 @@ label.error
   margin: 0
   padding: 0
 
+@media (min-width: 1200px)
+  #go-top
+    display: block
+  #go-top:hover
+    opacity: 0.8
+  .button:hover
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+
 @media (max-width: 1200px)
   .container
     width: 98%
     max-width: 940px
     margin: auto
+  
 @media (max-width: 992px)
   .container
     width: 98%
@@ -101,7 +112,7 @@ label.error
     max-width: 544px
 @media (max-width: 567px)
   img
-    max-width: 270px
+    max-width: 247px
   section
     padding: 30px 0
   .container

@@ -1,0 +1,42 @@
+.assistance
+  &-block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: auto
+    margin-bottom: 140px
+    &__item
+      background: $secondary
+      max-width: 370px
+      height: 410px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin: auto
+      margin-top: 100px
+    &__text
+      display: block
+      font-size: 16px
+      margin: 27px 25px
+      max-width: 285px
+      +reg
+      & b 
+        +bold
+    &__image
+      width: 370px
+      height: 270px
+      display: block
+      vertical-align: bottom
+@media (max-width: 567px)
+  .assistance
+    &-block
+      &__item
+        width: 272px
+        height: 300px
+      &__text
+        font-size: 12px
+        line-height: 16.83px
+      &__image
+        max-width: 247px
+        height: 198px
+  

@@ -8,6 +8,7 @@
     line-height: 1.6;
   &__subtitle
     display: block
+    text-align: center
     margin: auto
     margin-bottom: 55px
   &__cards
@@ -72,3 +73,24 @@
   .price
     &__cards
       justify-content: center
+@media (max-width: 567px)
+  .price
+    &__title
+      margin: auto
+      margin-bottom: 22px
+      margin-top: 19px
+      max-width: 625px
+      line-height: 1.3
+    &__cards
+      margin: auto
+    &__card
+      width: 270px  
+  .card
+    &__image img
+      margin: auto
+      max-width: 267px
+    &__title
+      margin-top: 27px
+      margin-bottom: 11px
+      font-size: 14px
+      

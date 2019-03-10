@@ -53,7 +53,6 @@
         line-height: 35px
         position: absolute
         left: 0px
-        top: 0px
   &__form
     justify-content: center
     display: flex
@@ -117,20 +116,38 @@
       width: 100%
 @media (max-width: 567px)
   .brif
-    background-size: 100% 55%, cover
+    background-size: 100% 50%, cover
     background-repeat: no-repeat, no-repeat
     background-position: top center, bottom center
+    &-block
+      min-width: 274px
+      margin: 0
     &-interview
       &__title
-        padding-top: 60px
-        margin-bottom: 16px
+        padding-top: 22px
+        margin-bottom: 10px
+        line-height: 1.2
+        font-size: 18px
       &__subtitle
-        margin-bottom: 35px
+        margin-bottom: 15px
     &-list
       padding-bottom: 68px
+      &__item
+        padding-left: 44px
+        margin-bottom: 30px
+        font-size: 14px
+        +reg
+        &:before
+          width: 30px
+          height: 30px
+          font-size: 12px
+          line-height: 30px
     &-form
       &__title
-        margin-bottom: 16px
+        padding-top: 38px
+        margin-bottom: 18px
+        line-height: 1.4
+        font-size: 17px
       &__subtitle
         margin-bottom: 35px
       &__input
@@ -140,3 +157,9 @@
           margin-bottom: 8px
       &__button
         margin-bottom: 30px
+      &__text
+        padding-bottom: 32px
+        margin-top: 0px
+        width: 190px
+        text-align: center
+        margin: auto

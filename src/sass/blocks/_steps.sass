@@ -6,7 +6,7 @@
     content: ''
     position: absolute
     top: -10px
-    right: -55%
+    right: -50%
     width: 72px
     height: 25px
     background: url('../img/steps/arrow.png')
@@ -17,15 +17,19 @@
     &__title
       margin: auto
       margin-bottom: 58px
+      margin-top: 50px
+      max-width: 660px
+      line-height: 1.7
     &__subtitle
       margin: auto
       text-align: center
       display: block
-      margin-bottom: 58px
+      margin-bottom: 67px
   &-block
     display: flex
-    justify-content: space-between
+    justify-content: space-around
     flex-wrap: wrap
+    margin-bottom: 45px
   &__image
     width: 100px
     height: 100px
@@ -41,7 +45,7 @@
     margin: auto
     text-align: center
     font-size: 14px
-    line-height: 20px
+    line-height: 17px
 @media (max-width: 1200px)
   .step
     &:after

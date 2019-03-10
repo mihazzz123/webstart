@@ -1,0 +1,46 @@
+.more
+  &__title
+    font-size: 30px
+    max-width: 645px
+    padding-bottom: 100px
+    +bold
+    display: block
+    margin: auto
+    line-height: 1.4
+  &-block
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 150px
+    &__item
+      max-width: 286px
+      margin: auto
+    &__img
+      margin: auto
+      width: 270px
+      height: 360px
+      background: $secondary
+      text-align: center
+    &__image
+      padding: 25px
+    &__text
+      display: block
+      margin: auto
+      width: 100%
+      margin-top: 41px
+      font-size: 18px;
+      text-align: center
+      margin-bottom: 44px
+      +reg
+@madia (max-width:768px)
+  .more
+    &__text
+    margin-top: 31px
+    margin-bottom: 44px
+    font-size: 14px
+    max-width: 247px
+@media (max-width: 567px)
+  .more__title
+    font-size: 18px
+    padding-bottom: 49px
+    max-width: 320px

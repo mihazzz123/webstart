@@ -35,14 +35,12 @@ body
   
   
 section
-  padding: 90px 0
+  padding: 40px 0
 .section-light
   background: $secondary  
 .section
   &__title
-    max-width: 600px
     text-align: center
-    font-size: 24px;
     +bold
   &__subtitle
     font-size: 16px;
@@ -60,8 +58,8 @@ section
 
 .container
   margin: auto
-  width: 95%
   max-width: 1170px
+  padding: 0
 
 .button
   background-color: $main-color
@@ -101,12 +99,12 @@ label.error
     margin: auto
   
 @media (max-width: 992px)
+  section
+    padding: 50px 0
   .container
     width: 98%
     max-width: 720px
 @media (max-width: 768px)
-  section
-    padding: 50px 0
   .container
     width: 98%
     max-width: 544px

@@ -23,9 +23,12 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Ремонт квартир</title>
 
+  <!-- validetta -->
+  <link href="css/validetta.min.css" rel="stylesheet" type="text/css" media="screen" >
+
   <!-- Яндекс Метрика -->
   <!-- Yandex.Metrika counter --> 
-  <script type="text/javascript" >
+  <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(52718305, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script>
   <noscript>
     <div>
@@ -33,10 +36,9 @@
     </div>
   </noscript> <!-- /Yandex.Metrika counter -->
 
-  <head>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=c46d4ee4-ffc9-438e-9e0f-b6b79992cd4b&lang=ru_RU" type="text/javascript">
-    </script>
-  </head>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=c46d4ee4-ffc9-438e-9e0f-b6b79992cd4b&lang=ru_RU">
+  </script>
+  
 </head>
 <body>
   <button id="go-top"><i class="fas fa-arrow-up"></i></button>
@@ -119,8 +121,8 @@
         </span>
         <!-- /.section__subtitle offer__subtitle -->
         <form action="#" id="offer-form" method="get" onsubmit="ym(52718305, 'reachGoal', 'offer-form'); return true;" class="form offer__form">
-          <input type="text" name="username" placeholder="Ваше имя" class="input offer__input">
-          <input type="tel" name="phone" placeholder="Ваш телефон" class="input phone offer__input">
+          <input type="text" name="username" placeholder="Ваше имя" class="input offer__input" data-validetta="required,minLength[2],maxLength[15]">
+          <input type="tel" name="phone" placeholder="Ваш телефон" class="input phone offer__input" data-validetta="required,digital">
           <button class="button offer__button">Получить бесплатный дизайн-проект</button>
           <!-- /.button offer__button -->
         </form>
@@ -469,18 +471,18 @@
                 <!-- /.contacts__title -->
                 <ul class="contacts-list">
                   <li class="contacts-list__item">
-                    <spam class="contacts-list__icon">
+                    <span class="contacts-list__icon">
                       <i class="fas fa-map-marker-alt"></i>
-                    </spam>
+                    </span>
                     <!-- /.contacts__icon -->
                     <span class="contacts-list__text">г. Москва <br> <b>ул. Ленина, д. 10, корпус 2, оф. 308</b></span>
                     <!-- /.contacts-list__text -->
                   </li>
                   <!-- /.contacts-list__item -->
                   <li class="contacts-list__item">
-                    <spam class="contacts-list__icon">
+                    <span class="contacts-list__icon">
                       <i class="far fa-clock"></i>
-                    </spam>
+                    </span>
                     <!-- /.contacts__icon -->
                     <div class="contacts-list__text">Режим работы: <br> 
                     <b>с 9:00 до 18:00</b></div>
@@ -488,9 +490,9 @@
                   </li>
                   <!-- /.contacts-list__item -->
                   <li class="contacts-list__item">
-                    <spam class="contacts-list__icon">
+                    <span class="contacts-list__icon">
                       <i class="fas fa-phone"></i>
-                    </spam>
+                    </span>
                     <!-- /.contacts__icon -->
                     <div class="contacts-list__text">Телефон: <br>  
                     <a href="tel:+7(495)42-251-31">+7 (495) 42-251-31</a></div>
@@ -509,76 +511,26 @@
   </footer>
   <!-- /.footer -->  
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/validetta.min.js"></script>
+  <script src="js/validettaLang-ru-RU.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script>
     $(document).ready(function() {
       // Валидация номера телефона 
-      jQuery(function($){
-        $(".phone").mask("+7 (999) 999 99-99");
-      });
-      // Валидация формы
+      
+      $(".phone").mask("+7 (999) 999 99-99");
      
-      $("#brif-form").validate({
-         
-        rules: {
-          phone: {
-            required: true
-          },
-          username: {
-            required: true,
-            minlength: 2,
-            maxlength: 15
-          },
-          email: {
-            required: true,
-            minlength: 11,
-            email: true
-          }
-        },
-        messages: {
-          username: {
-            required: "Укажите имя"
-          },
-          phone: {
-            required: "Укажите номер телефона"
-          },
-          email: {
-            required: "Укажите электронную почту",
-            email: "Введите корректный email"
-          }
-        }
+      // Валидация форм
+      $("#offer-form").validetta( {
+        bubblePosition: 'bottom',
+        bubbleGapTop: 10,
+        bubbleGapLeft: -5
       });
-      $("#offer-form").validate({
-         
-         rules: {
-           phone: {
-             required: true
-           },
-           username: {
-             required: true,
-             minlength: 2,
-             maxlength: 15
-           }
-         },
-         messages: {
-           username: {
-             required: "Укажите имя"
-           },
-           phone: {
-             required: "Укажите номер телефона"
-           }
-          }
-       });
-
-
-       $("#brif-form").validate({
-        errorClass: "invalid"
-      });
-      // Сладер 
+       // Сладер 
       var owl = $('.owl-carousel');
       owl.owlCarousel({
         loop:true,

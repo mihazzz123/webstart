@@ -14,7 +14,6 @@
     background-color: #ffffff
   &-block
     position: relative
-    width: 52%
     padding-right: 90px
     margin-top: 30px
     padding-bottom: 45px
@@ -31,6 +30,8 @@
     max-width: 250px
     font-size: 16px
     line-height: 18px
+  &__form
+    max-width: 495px
   &__input
     margin-bottom: 30px
     width: 240px
@@ -51,6 +52,7 @@
     max-width: 230px
     font-size: 15px
     line-height: 23px
+    display: block
     & b 
       +bold
 
@@ -59,16 +61,22 @@
     background-size: cover
     &-block
       padding-right: 45px
+      max-width: 460px
+    &__form
+      max-width: 460px
     &__input
       width: 100%
       margin-right: 0
       margin-bottom: 10px
+    &__text
+      max-width: 200px
 @media (max-width: 992px)
   .offer
     background: #fff
     &-block
       padding-right: 0
       width: 100%
+      margin: auto
     &__title
       max-width: 500px
       text-align: left

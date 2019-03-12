@@ -423,9 +423,9 @@
           <span class="brif-form__subtitle">Для этого заполните форму ниже    </span>
           <!-- /.brif-form__subtitle -->
           <form action="#" id="brif-form" class="brif__form">
-            <input type="text" name="username" class="brif-form__input input" placeholder="Ваше имя">
-            <input type="tel" name="phone" class="brif-form__input input phone" placeholder="Ваш телефон">
-            <input type="email" name="email" class="brif-form__input input" placeholder="Ваш email">
+            <input type="text" name="username" class="brif-form__input input" placeholder="Ваше имя" data-validetta="required,minLength[2],maxLength[15]">
+            <input type="tel" name="phone" class="brif-form__input input phone" placeholder="Ваш телефон" data-validetta="required,digital">
+            <input type="email" name="email" class="brif-form__input input" placeholder="Ваш email" data-validetta="required,email">
             <button class="brif-form__button button">Рассчитать стоимость </button>
             <!-- /.brif-form__button button -->
             <p class="brif-form__text">Мы перезвоним Вам в течение 60 секунд </p>
@@ -510,7 +510,7 @@
     <!-- /.footer-wpar -->
   </footer>
   <!-- /.footer -->  
-  
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/validetta.min.js"></script>
@@ -531,6 +531,7 @@
         bubbleGapTop: 10,
         bubbleGapLeft: -5
       });
+      $("#brif-form").validetta();
        // Сладер 
       var owl = $('.owl-carousel');
       owl.owlCarousel({

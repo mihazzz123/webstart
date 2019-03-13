@@ -87,6 +87,13 @@ body
   .button:hover
     background-color: lighten($main-color, 10%)
     cursor: pointer
+  .card__link:hover
+      &:after
+        height: 12px
+  .card:hover
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
+    .card__image:before
+      opacity: 0.8
 
 @media (max-width: 1200px)
   .container

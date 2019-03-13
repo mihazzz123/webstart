@@ -107,7 +107,14 @@ body {
     opacity: 0.8; }
   .button:hover {
     background-color: #ffdb33;
-    cursor: pointer; } }
+    cursor: pointer; }
+  .card__link:hover:after {
+    height: 12px; }
+  .card:hover {
+    -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1); }
+    .card:hover .card__image:before {
+      opacity: 0.8; } }
 
 @media (max-width: 1200px) {
   .container {
@@ -713,11 +720,6 @@ body {
   border: 1px solid #e8e8e8;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-  .card:hover {
-    -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1); }
-    .card:hover .card__image:before {
-      opacity: 0.8; }
   .card__image {
     display: block;
     position: relative; }
@@ -751,8 +753,6 @@ body {
     font-size: 16px;
     font-family: 'Museo Sans Bold', sans;
     font-weight: 700; }
-    .card__link:hover:after {
-      height: 12px; }
     .card__link:after {
       content: '';
       position: absolute;
@@ -1052,7 +1052,8 @@ body {
 @media (max-width: 567px) {
   .promo__title {
     font-size: 18px;
-    padding: 30px 0; } }
+    padding: 38px 0;
+    line-height: 21px; } }
 
 .assistance-block {
   display: -webkit-box;
@@ -1294,12 +1295,11 @@ body {
       margin-bottom: 50px; }
     .brif-form__input {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       font-size: 15px; }
-      .brif-form__input:first-child {
-        margin-bottom: 15px; }
     .brif-form__button {
       width: 100%;
+      margin-top: 15px;
       margin-bottom: 33px;
       height: 70px;
       font-size: 16px;

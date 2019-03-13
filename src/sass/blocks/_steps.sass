@@ -99,3 +99,59 @@
     &__text
       max-width: 130px
       line-height: 1.5
+
+@media (min-width: 1200px)
+  .step-anim-1
+    animation: show-1 900ms ease-out
+    @keyframes show-1
+      0%
+        opacity: 0.1
+        transform: translateX(-200px) rotate(300deg)
+      100%
+    transform: translateX(0)
+  .step-anim-2
+    animation: show-2 900ms ease-out 
+    @keyframes show-2
+      0%
+        opacity: 0.1
+        transform: translateX(-300px) rotate(270deg)
+      100%
+      transform: translateX(0)  
+  .step-anim-3
+    animation: show-3 900ms ease-out 
+    @keyframes show-3
+      0%
+        opacity: 0.1
+        transform: translateX(-400px) rotate(240deg)
+      100%
+        transform: translateX(0)
+  .step-anim-4
+    animation: show-4 900ms ease-out
+    @keyframes show-4
+      0%
+        opacity: 0.1
+        transform: translateX(-500px) rotate(210deg)
+      100%
+        transform: translateX(0)
+  .step-anim-5
+    animation: show-5 900ms ease-out
+    @keyframes show-5
+      0%
+        opacity: 0.1
+        transform: translateX(-600px) rotate(180deg)
+      100%
+        transform: translateX(0)
+  .step:after, .step__text
+    content: ""
+    animation-name: fadein 
+    animation-duration: 1.5s
+    // animation-iteration-count: infinite
+    animation-delay: 500ms
+    animation-timing-function: ease-out
+    @keyframes fadein
+      0%
+        opacity: 0.01
+      20%
+        opacity: 0.2
+      100%
+        opacity: 1

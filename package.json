@@ -1,0 +1,24 @@
+{
+  "name": "webstart",
+  "version": "1.0.0",
+  "description": "Первый сайт",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihazzz123/webstart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mihazzz123/webstart/issues"
+  },
+  "homepage": "https://github.com/mihazzz123/webstart#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0"
+  }
+}

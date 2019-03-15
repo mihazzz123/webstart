@@ -1644,8 +1644,10 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
     .brif-interview {
+      width: 100%;
       padding-right: 0px; }
     .brif-form {
+      width: 100%;
       padding-left: 0px;
       padding-top: 40px; }
     .brif__form {

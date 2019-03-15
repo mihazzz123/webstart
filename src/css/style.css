@@ -486,7 +486,7 @@ body {
           flex-direction: column; }
 
 .navbar__address {
-  display: inline-block;
+  display: block;
   margin-bottom: 8px;
   font-size: 13px;
   font-weight: 400;
@@ -545,10 +545,11 @@ body {
   font-weight: 700;
   font-size: 41px;
   line-height: 51px;
-  max-width: 480px;
+  max-width: 490px;
   margin-top: 36px; }
 
 .hero__subtitle {
+  display: block;
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
@@ -1511,6 +1512,7 @@ body {
   .brif-interview {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    width: 50%;
     padding-right: 70px; }
     .brif-interview__title {
       font-size: 22px;
@@ -1588,6 +1590,7 @@ body {
     max-width: 370px;
     width: 100%; }
   .brif-form {
+    width: 50%;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     padding-left: 210px; }
@@ -1597,7 +1600,8 @@ body {
       font-family: 'Museo Sans Bold', sans;
       font-weight: 700;
       margin-bottom: 50px;
-      line-height: 1.4; }
+      line-height: 1.4;
+      min-width: 370px; }
     .brif-form__subtitle {
       text-align: center;
       font-size: 16px;
@@ -1706,7 +1710,8 @@ body {
   height: 640px;
   position: absolute;
   left: 0;
-  top: 0; }
+  top: 0;
+  background: url("/src/img/footer/screenshot_81.jpg") no-repeat center center; }
 
 .contacts {
   display: -webkit-box;

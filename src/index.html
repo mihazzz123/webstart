@@ -12,6 +12,7 @@
   
 </head>
 <body>
+  
   <!-- Яндекс Метрика -->
   <!-- Yandex.Metrika counter --> 
   <script>
@@ -22,8 +23,10 @@
     </div>
   </noscript> <!-- /Yandex.Metrika counter -->
 
+  <!-- Яндекс Карты -->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=c46d4ee4-ffc9-438e-9e0f-b6b79992cd4b&lang=ru_RU">
   </script>
+  <script src="js/request_map.js"></script>
 
 
   <button id="go-top"><i class="fas fa-arrow-up"></i></button>
@@ -438,21 +441,21 @@
     <div class="footer-wpar">
         <div class="map" id="map">
             <script>
-              ymaps.ready(init);
-              function init(){
-                var myMap = new ymaps.Map("map", {
-                  center: [55.611409, 37.201122],
-                  zoom: 16,
-                  scroll: false
-                });
-                var glyphIcon = new ymaps.Placemark([55.611409, 37.201122], {}, {
-                  preset: 'islands#yellowGlyphIcon', 
-                  iconGlyph: 'home',
-                });
-                myMap.geoObjects
-                  .add(glyphIcon);
-                myMap.behaviors.disable('scrollZoom');
-              }
+              // ymaps.ready(init);
+              // function init(){
+              //   var myMap = new ymaps.Map("map", {
+              //     center: [55.611409, 37.201122],
+              //     zoom: 16,
+              //     scroll: false
+              //   });
+              //   var glyphIcon = new ymaps.Placemark([55.611409, 37.201122], {}, {
+              //     preset: 'islands#yellowGlyphIcon', 
+              //     iconGlyph: 'home',
+              //   });
+              //   myMap.geoObjects
+              //     .add(glyphIcon);
+              //   myMap.behaviors.disable('scrollZoom');
+              // }
             </script>
           </div>
           <!-- /#map.map -->
@@ -505,7 +508,6 @@
   <!-- /.footer -->  
 
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/validetta.min.js"></script>
   <script src="js/validettaLang-ru-RU.js"></script>
   <script src="js/modal.js"></script>

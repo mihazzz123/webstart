@@ -1,34 +1,56 @@
+$validetta-font-size              : 12px !default;
+$validetta-line-height            : 14px !default;
+$validetta-font-family            : Arial, Helvetica, sans-serif !default;
+$validetta-bubble-color           : white;
+$validetta-bubble-bg-color        : #cd2e26 !default;
+$validetta-bubble-radius          : 5px !default;
+$validetta-bubble-caret-size      : 5px !default;
+$validetta-bubble-pad-vertical    : 5px !default;
+$validetta-bubble-pad-horizontal  : 12px !default;
+$validetta-inline-color           : $validetta-bubble-bg-color !default;
+
 .validetta-bubble {
   position: absolute;
-  background-color: #cd2e26;
+  background-color: $validetta-bubble-bg-color;
   max-width: 325px;
-  border-radius: 5px;
-  color: white;
-  padding: 5px 12px;
-  z-index: 9; }
-  .validetta-bubble:before {
+  border-radius: $validetta-bubble-radius;
+  color: $validetta-bubble-color;
+  padding: $validetta-bubble-pad-vertical $validetta-bubble-pad-horizontal;
+  z-index: 9;
+
+  &:before {
     content: '';
     position: absolute;
     display: block;
     height: 0;
     width: 0;
-    border-width: 5px;
-    border-style: solid; }
-  .validetta-bubble--right:before {
-    top: 7px;
-    left: -10px;
-    border-color: transparent #cd2e26 transparent transparent; }
-  .validetta-bubble--bottom:before {
-    top: -10px;
-    left: 10px;
-    border-color: transparent transparent #cd2e26 transparent; }
+    border-width: $validetta-bubble-caret-size;
+    border-style: solid;
+  }
+
+  &--right {
+    &:before {
+      top: ceil( ( $validetta-line-height +  ( $validetta-bubble-pad-vertical * 2 ) -  ( $validetta-bubble-caret-size * 2 ) ) / 2 );
+      left: - $validetta-bubble-caret-size * 2;
+      border-color: transparent $validetta-bubble-bg-color transparent transparent;
+    }
+  }
+
+  &--bottom {
+    &:before {
+      top: - $validetta-bubble-caret-size * 2;
+      left: 10px;
+      border-color: transparent transparent $validetta-bubble-bg-color transparent;
+    }
+  }
+}
 
 .validetta-inline,
 .validetta-bubble {
   display: block;
-  font: 12px/14px Arial, Helvetica, sans-serif; }
+  font: #{$validetta-font-size}/#{$validetta-line-height} $validetta-font-family ;
+}
 
 .validetta-inline {
-  color: #cd2e26; }
-
-/*# sourceMappingURL=validetta.css.map */
+  color: $validetta-inline-color;
+}

@@ -312,14 +312,16 @@ template {
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 @font-face {
   font-family: 'Museo Sans Bold';
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -1407,8 +1409,7 @@ body {
   .assistance-block__image {
     width: 370px;
     height: 270px;
-    display: block;
-    vertical-align: bottom; }
+    display: block; }
 
 @media (max-width: 567px) {
   .assistance {
@@ -1470,8 +1471,8 @@ body {
       font-family: 'Museo Sans Regular', sans;
       font-weight: 300; }
 
-@madia (max-width:768px) {
-  .more {
+@media (max-width: 768px) {
+  .more__text {
     margin-top: 31px;
     margin-bottom: 44px;
     font-size: 14px;
@@ -2103,4 +2104,37 @@ body {
             animation: unset !important;
     -webkit-transition: none !important;
     transition: none !important; } }
+
+.validetta-bubble {
+  position: absolute;
+  background-color: #cd2e26;
+  max-width: 325px;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 12px;
+  z-index: 9; }
+  .validetta-bubble:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+    border-width: 5px;
+    border-style: solid; }
+  .validetta-bubble--right:before {
+    top: 7px;
+    left: -10px;
+    border-color: transparent #cd2e26 transparent transparent; }
+  .validetta-bubble--bottom:before {
+    top: -10px;
+    left: 10px;
+    border-color: transparent transparent #cd2e26 transparent; }
+
+.validetta-inline,
+.validetta-bubble {
+  display: block;
+  font: 12px/14px Arial, Helvetica, sans-serif; }
+
+.validetta-inline {
+  color: #cd2e26; }
 /*# sourceMappingURL=style.css.map */

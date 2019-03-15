@@ -19,7 +19,8 @@
   "homepage": "https://github.com/mihazzz123/webstart#readme",
   "devDependencies": {
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^4.0.0"
+    "gulp-clean-css": "^4.0.0",
+    "gulp-jsmin": "^0.1.5"
   },
   "dependencies": {
     "gulp-htmlmin": "^5.0.1",

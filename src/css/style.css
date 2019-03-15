@@ -1601,7 +1601,7 @@ body {
       font-weight: 700;
       margin-bottom: 50px;
       line-height: 1.4;
-      min-width: 370px; }
+      max-width: 370px; }
     .brif-form__subtitle {
       text-align: center;
       font-size: 16px;
@@ -1711,7 +1711,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("/src/img/footer/screenshot_81.jpg") no-repeat center center; }
+  background: url("../img/footer/screenshot_81.jpg") no-repeat center center; }
 
 .contacts {
   display: -webkit-box;

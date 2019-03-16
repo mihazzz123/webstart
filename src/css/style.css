@@ -1706,6 +1706,8 @@ body {
 
 .footer {
   position: relative; }
+  .footer-container {
+    padding-left: 215px; }
 
 .map {
   width: 50%;
@@ -1725,7 +1727,6 @@ body {
           flex-direction: column;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding-left: 215px;
   padding-top: 60px; }
   .contacts-block {
     display: -webkit-box;
@@ -1781,6 +1782,11 @@ body {
         color: #333333; }
 
 @media (max-width: 992px) {
+  .footer-container {
+    padding-left: 0;
+    width: 100%;
+    margin: auto;
+    height: 30%; }
   .footer-wpar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1794,13 +1800,8 @@ body {
     width: 100%;
     margin: auto;
     min-height: 70%; }
-  .footer-container {
-    width: 100%;
-    margin: auto;
-    height: 30%; }
   .contacts {
     margin: auto;
-    padding-left: 0;
     padding-top: 30px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }

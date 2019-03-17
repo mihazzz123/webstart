@@ -107,18 +107,28 @@
 //       padding-left: 10px
 @media (max-width: 992px)
   .brif
-    background-size: 100% 45%, cover
+    background-size: 100% 47%, cover
     background-repeat: no-repeat, no-repeat
     background-position: top center, bottom center
     &-block
       flex-direction: column
     &-interview
-      width: 100%
+      width: 90%
       padding-right: 0px
+      margin: auto
+      &__title
+        text-align: center
+      &__subtitle
+        display: block
+        margin: 0 auto 80px auto
+        text-align: center
+        width: 100%
     &-form
-      width: 100%
+      width: 90%
       padding-left: 0px
       padding-top: 40px
+      &__title
+        max-width: 100%
     &__form
       margin: auto
       width: 100%
@@ -133,11 +143,13 @@
       margin: 0
     &-interview
       &__title
+        text-align: left
         padding-top: 26px
-        margin-bottom: 34px
+        margin: 0 0 34px 0
         line-height: 1.2
         font-size: 18px
       &__subtitle
+        text-align: left
         margin-bottom: 30px
     &-list
       padding-bottom: 0

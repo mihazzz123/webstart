@@ -624,8 +624,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .hero__title {
+    font-size: 38px; }
   .hero-text {
-    padding-right: 10px; }
+    padding-right: 0; }
   .hero-img {
     max-width: 49%; } }
 
@@ -636,11 +638,14 @@ body {
         -ms-flex-direction: column;
             flex-direction: column; }
   .hero-text {
+    text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-right: 0;
     padding-bottom: 20px; }
+  .hero__subtitle {
+    margin: 15px auto 52px auto; }
   .hero-list {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -648,7 +653,8 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    max-width: 247px; }
+    max-width: 247px;
+    margin: 17px auto 0 auto; }
   .hero-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -807,7 +813,11 @@ body {
       margin: auto; }
     .offer__title {
       max-width: 500px;
-      text-align: left; }
+      text-align: center; }
+    .offer__subtitle {
+      max-width: 350px;
+      margin: 0 auto 30px auto;
+      text-align: center; }
     .offer__button {
       margin-bottom: 15px; }
     .offer__desc {
@@ -837,11 +847,13 @@ body {
     padding: 0;
     padding-bottom: 20px; }
   .offer__title {
+    text-align: left;
     margin-top: 15px;
     font-size: 18px;
     line-height: 1.2;
     margin-bottom: 19px; }
   .offer__subtitle {
+    text-align: left;
     margin-bottom: 25px; }
   .offer__text {
     width: 100%;
@@ -1635,7 +1647,7 @@ body {
 
 @media (max-width: 992px) {
   .brif {
-    background-size: 100% 45%, cover;
+    background-size: 100% 47%, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: top center, bottom center; }
     .brif-block {
@@ -1644,12 +1656,22 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
     .brif-interview {
-      width: 100%;
-      padding-right: 0px; }
+      width: 90%;
+      padding-right: 0px;
+      margin: auto; }
+      .brif-interview__title {
+        text-align: center; }
+      .brif-interview__subtitle {
+        display: block;
+        margin: 0 auto 80px auto;
+        text-align: center;
+        width: 100%; }
     .brif-form {
-      width: 100%;
+      width: 90%;
       padding-left: 0px;
       padding-top: 40px; }
+      .brif-form__title {
+        max-width: 100%; }
     .brif__form {
       margin: auto;
       width: 100%; } }
@@ -1664,11 +1686,13 @@ body {
       min-width: 274px;
       margin: 0; }
     .brif-interview__title {
+      text-align: left;
       padding-top: 26px;
-      margin-bottom: 34px;
+      margin: 0 0 34px 0;
       line-height: 1.2;
       font-size: 18px; }
     .brif-interview__subtitle {
+      text-align: left;
       margin-bottom: 30px; }
     .brif-list {
       padding-bottom: 0;
@@ -1811,9 +1835,11 @@ body {
       margin: auto;
       margin-bottom: 40px;
       width: 100%;
+      max-width: 490px;
+      text-align: center;
       font-size: 22px; }
     .contacts-list {
-      margin: auto;
+      margin: 0 auto 64px auto;
       font-size: 16px; }
   .contacts-list {
     margin-bottom: 60px; } }
@@ -1829,8 +1855,6 @@ body {
       font-size: 17px;
       line-height: 1.3; }
     .contacts-list {
-      margin: 0 20px;
-      margin-left: 35px;
       margin-bottom: 64px; }
       .contacts-list__icon {
         margin-right: 10px;
